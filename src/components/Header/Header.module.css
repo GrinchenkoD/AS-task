@@ -1,0 +1,65 @@
+.header {
+  position: fixed;
+  display: block;
+
+  width: 100%;
+  border-bottom: 2px solid #e0e0e0;
+  padding: 15px 0;
+}
+.navigation {
+  display: flex;
+  align-items: baseline;
+}
+.brand {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #212121;
+
+  margin-right: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .brand {
+    font-size: 26px;
+    margin-right: 100px;
+  }
+}
+
+.brand_Accent {
+  color: #2196f3;
+  font-style: italic;
+}
+.list {
+  display: flex;
+}
+
+.item:not(:last-child) {
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .item:not(:last-child) {
+    margin-right: 25px;
+  }
+}
+
+.link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #212121;
+}
+.link_active {
+  color: #2196f3;
+}
+.link_active::after {
+  content: "";
+  display: block;
+
+  height: 3px;
+  width: 100%;
+  background-color: #2196f3;
+  border-radius: 10px;
+  margin-top: 5px;
+}
