@@ -12,17 +12,16 @@ const productsReducer = createReducer(initialState, {
   [loadProductSuccess]: (_, { payload }) => {
     return payload.products;
   },
-  // [addToFavoriteSuccess]: (state, { payload }) => {
-  //   const favoriteProduct = state.find((product) => product.id === payload.id);
-  //   console.log(payload);
-  //   favoriteProduct.favorite = true;
-  //   console.log(favoriteProduct);
-  //   console.log(...state.filter((product) => product.id !== payload.id));
-  //   return [
-  //     ...state.filter((product) => product.id !== payload.id),
-  //     favoriteProduct,
-  //   ];
-  // },
+  [addToFavoriteSuccess]: (state, { payload }) => {
+    const favoriteProduct = state.find((product) => product.id === payload.id);
+    const result = { ...favoriteProduct, favorite: true };
+    return [...state.filter((product) => product.id !== payload.id), result];
+  },
+  [deleteFromFavoriteSuccess]: (state, { payload }) => {
+    const favoriteProduct = state.find((product) => product.id === payload.id);
+    const result = { ...favoriteProduct, favorite: false };
+    return [...state.filter((product) => product.id !== payload.id), result];
+  },
 });
 
 export default productsReducer;

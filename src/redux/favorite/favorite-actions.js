@@ -1,4 +1,9 @@
 import { createAction } from "@reduxjs/toolkit";
+//load
+
+const loadFavoriteRequest = createAction("favorite/loadFavoriteRequest");
+const loadFavoriteSuccess = createAction("favorite/loadFavoriteSuccess");
+const loadFavoriteError = createAction("favorite/loadFavoriteError");
 
 // add
 const addToFavoriteRequest = createAction("favorite/addToFavoriteRequest");
@@ -23,4 +28,7 @@ export {
   deleteFromFavoriteRequest,
   deleteFromFavoriteSuccess,
   deleteFromFavoriteError,
+  loadFavoriteRequest,
+  loadFavoriteSuccess,
+  loadFavoriteError,
 };
