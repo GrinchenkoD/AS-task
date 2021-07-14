@@ -2,8 +2,8 @@ import { persistReducer } from "redux-persist";
 import { combineReducers } from "redux";
 import storage from "redux-persist/lib/storage";
 
-//! import products from "./date/dateReducer"; ================================
 import favoriteReducer from "./favorite/favorite-reducer";
+import productsReducer from "./products/products-reducer";
 
 const authPersistConfig = {
   key: "favorite-products",
@@ -12,7 +12,7 @@ const authPersistConfig = {
 };
 const reducer = combineReducers({
   favorite: persistReducer(authPersistConfig, favoriteReducer),
-  //!   products: date,================================
+  products: productsReducer,
 });
 
 export default reducer;

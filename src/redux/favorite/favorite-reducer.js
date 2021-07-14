@@ -6,8 +6,10 @@ import {
 
 const initialState = [];
 
-const favoriteReducer = createReducer(initialState, {
-  [addToFavoriteSuccess]: (state, { payload }) => [...state, payload],
+const favoriteReducer = createReducer([], {
+  [addToFavoriteSuccess]: (state, { payload }) => {
+    return [payload, ...state];
+  },
   [deleteFromFavoriteSuccess]: (state, { payload }) =>
     state.filter((product) => product.id !== payload.id),
 });

@@ -1,0 +1,75 @@
+.wraper {
+  padding-top: 30px;
+  border-top: 2px solid grey;
+}
+
+@media screen and (min-width: 1280px) {
+  .form {
+    display: flex;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+}
+.label {
+  display: flex;
+  margin-bottom: 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.input {
+  margin-left: 20px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 2px solid grey;
+}
+.inputfile {
+  margin-left: 20px;
+}
+
+.inputfile::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.inputfile::before {
+  content: "+";
+  display: inline-block;
+  background-color: lightgrey;
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.textarea {
+  width: 300px;
+  min-height: 100px;
+  resize: none;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  padding: 15px;
+  border: 2px solid grey;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .textarea {
+    width: 700px;
+  }
+  .submitBtn {
+    margin: 0 auto;
+  }
+}
+
+.submitBtn {
+  padding: 10px 50px;
+  font-size: 20px;
+  font-weight: 700;
+
+  border-radius: 5px;
+  background-color: #2196f3;
+  color: #fff;
+}
